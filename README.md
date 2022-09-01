@@ -1,8 +1,14 @@
-# BulkSeqAssistant Version 5.1.3
+# BulkSeqAssistant V5.1.3  
+by Zhiming Ye @ Guangzhou Medical University, Last update date: 2022-9-1
 ### A function collection developed to simplify the omics analysis process.
 This package is designed for bulk RNA-seq analysis and organizing data.  
 Part of the function can be adopt in organizing data, WES analysis and scRNA-seq analysis as well.  
 This version may faced with several dependency bugs.  
+### Installation
+```
+library(devtools)
+install_github("ZhimingYe/BulkSeqAssistant")
+```
 ### Function List: 
 * Arrange_Table
 * CalcMad
