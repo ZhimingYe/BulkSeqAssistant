@@ -11,6 +11,7 @@ This version may face with several dependency bugs.
 library(devtools)
 install_github("ZhimingYe/BulkSeqAssistant")
 ```
+WARNING: BioConductor dependencies 'clusterProfiler', 'edgeR', 'GSEABase', 'GSVA', 'ReactomePA', 'enrichplot' and 'org.Hs.eg.db', as well as 'ggbiplot' form Github were not on CRAN. So you may install them by yourself.  
 ### Function List: 
 * Arrange_Table
 * CalcMad
