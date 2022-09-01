@@ -1,0 +1,43 @@
+Package: BulkSeqAssistant
+Type: Package
+Title: A simple helper for bioinformics analysis
+Version: 5.1.3
+Author: Zhiming Ye
+Maintainer: Zhiming Ye <zhiming.ye@qq.com>
+Description: A function collection developed to simplify the omics analysis process.
+  This package is designed for bulk RNA-seq analysis and organizing data.
+  Part of the function can be adopt in organizing data, WES analysis and scRNA-seq analysis as well.
+Imports:
+    clusterProfiler,
+    dplyr,
+    edgeR,
+    umap,
+    FSA,
+    FactoMineR,
+    GSEABase,
+    GSVA,
+    NMF,
+    Hmisc,
+    ReactomePA,
+    WGCNA,
+    enrichplot,
+    factoextra,
+    ggalluvial,
+    ggbiplot,
+    ggplot2,
+    ggpubr,
+    ggsci,
+    org.Hs.eg.db,
+    survival,
+    survminer,
+    tidyverse,
+    umap,
+    magrittr,
+    purrr,
+    readr,
+    stringr,
+    tibble
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
