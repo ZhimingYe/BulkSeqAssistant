@@ -1,8 +1,9 @@
-#Last changed : 2022-9-1 21:52
+#Last changed : 2022-9-2 11:20
 .onAttach<-function(libname,pkgname){
-  packageStartupMessage("***BulkSeqAssistant*** V5.1.3\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials for learning and communication purposes only.\nThis version may faced with several dependency bugs.\n")
+  packageStartupMessage("***BulkSeqAssistant*** V5.1.6\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials for learning and communication purposes only.\nBug feedback Email: zhiming.ye@qq.com\n")
 }
-
+#library(tidyverse)
+#library(magrittr)
 #' @title Get DEG from DEseq2 result
 #'
 #' @param DEseq2Result A DEseq2 result. Should be converted to data frame.
@@ -93,7 +94,6 @@ Plot.Box.Lite<-function(Mat,xcolName,ycolName,colorList,my_comparisons,Method="w
     y = ycolName,
     fill = xcolName,
     bxp.errorbar = T,
-    ylab = cells[1],
     palette = colorList
   ) + guides(fill = "none") + stat_compare_means(comparisons = my_comparisons,
                                                  method = Method,
@@ -679,13 +679,14 @@ rmEnsemblDot <- function(Mat, ColNum) {
 #'
 #' @param Chr Target character vector
 #' @param SepChr seperate character
+#' @param num Target character location
 #'
 #' @return a character vector
 #' @export
 #'
 #' @examples
-rmSep <- function(Chr,SepChr) {
-  SimSymbol<-sapply(strsplit(Chr,SepChr), function(x)x[1])
+rmSep <- function(Chr,SepChr,num) {
+  SimSymbol<-sapply(strsplit(Chr,SepChr), function(x)x[num])
   return(SimSymbol)
 }
 #' @title Convert Ensembl ID to Symbol

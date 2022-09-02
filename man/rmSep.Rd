@@ -4,12 +4,14 @@
 \alias{rmSep}
 \title{remove separate from character}
 \usage{
-rmSep(Chr, SepChr)
+rmSep(Chr, SepChr, num)
 }
 \arguments{
 \item{Chr}{Target character vector}
 
 \item{SepChr}{seperate character}
+
+\item{num}{Target character location}
 }
 \value{
 a character vector
