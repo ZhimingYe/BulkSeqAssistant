@@ -1,5 +1,5 @@
-# BulkSeqAssistant V5.1.3  
-by Zhiming Ye @ Guangzhou Medical University, Last update date: 2022-9-1   
+# BulkSeqAssistant V5.1.6  
+by Zhiming Ye @ Guangzhou Medical University, Last update date: 2022-9-2   
 > Part of the code comes from online materials for learning and communication purposes only.  
 
 ### A function collection developed to simplify the omics analysis process.
@@ -11,7 +11,7 @@ This version may face with several dependency bugs.
 library(devtools)
 install_github("ZhimingYe/BulkSeqAssistant")
 ```
-WARNING: BioConductor dependencies 'clusterProfiler', 'edgeR', 'GSEABase', 'GSVA', 'ReactomePA', 'enrichplot', 'impute', 'preprocessCore' and 'org.Hs.eg.db', as well as 'ggbiplot' form Github were not on CRAN. So you may install them by yourself.  
+WARNING: BioConductor dependencies like 'clusterProfiler', 'edgeR', 'GSEABase', 'GSVA', 'ReactomePA', 'enrichplot', 'impute', 'preprocessCore' and 'org.Hs.eg.db', as well as 'ggbiplot' form Github were not on CRAN. So you may install them by yourself.  
 ### Function List: 
 * Arrange_Table
 * CalcMad
