@@ -1023,5 +1023,5 @@ BuildMultigroupDEGlist<-function(Gene,Group,logFC,OrgDB=org.Hs.eg.db){
 }
 
 .onAttach<-function(libname,pkgname){
-  packageStartupMessage("\n***BulkSeqAssistant*** V5.2\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials. For learning and communication purposes only.\nBug feedback Email: zhiming.ye@qq.com\n")
+  packageStartupMessage("\n***BulkSeqAssistant*** V5.2.1\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials. For learning and communication purposes only.\nBug feedback Email: zhiming.ye@qq.com\n")
 }
