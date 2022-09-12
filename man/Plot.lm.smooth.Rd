@@ -17,3 +17,6 @@ A ggplot2 object
 \description{
 Plot the fitted line
 }
+\author{
+Zhiming Ye
+}

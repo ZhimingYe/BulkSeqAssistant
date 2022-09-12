@@ -19,3 +19,6 @@ wilcox.adj.test(Mat, FactorCol, Method = "BH")
 \description{
 Batch wilCox test, with P value Corrected.
 }
+\author{
+Zhiming Ye
+}

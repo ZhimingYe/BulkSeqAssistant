@@ -30,3 +30,6 @@ A ggplot2 object
 \description{
 Generate pie plot
 }
+\author{
+Zhiming Ye
+}

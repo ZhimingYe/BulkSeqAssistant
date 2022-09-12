@@ -17,3 +17,6 @@ NULL, save a file to work dictionary.
 \description{
 Write tab table file
 }
+\author{
+Zhiming Ye
+}

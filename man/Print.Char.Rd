@@ -17,3 +17,6 @@ Print.Char(CharacterCollection, Type = "c")
 \description{
 An enhanced method to print character vector to the console
 }
+\author{
+Zhiming Ye
+}

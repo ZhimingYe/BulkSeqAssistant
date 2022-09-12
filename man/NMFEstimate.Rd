@@ -18,3 +18,6 @@ NMFEstimate(mat, pdfname, pngname, filename)
 \description{
 NMF Estimation
 }
+\author{
+Zhiming Ye
+}

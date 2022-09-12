@@ -21,3 +21,6 @@ A cowplot plot_gird object
 \description{
 Generate a GSEA plot with ranked curve, which only used when drawing multi-pathways.
 }
+\author{
+Zhiming Ye
+}

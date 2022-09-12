@@ -4,7 +4,7 @@
 \alias{getDESeq2DEG}
 \title{Get DEG from DEseq2 result}
 \usage{
-getDESeq2DEG(DEseq2Result, Type, Padj = 0.05, lFC = 1)
+getDESeq2DEG(DEseq2Result, Type, Padj = 0.05, lFC = 1, limma = F)
 }
 \arguments{
 \item{DEseq2Result}{A DEseq2 result. Should be converted to data frame.}
@@ -14,10 +14,15 @@ getDESeq2DEG(DEseq2Result, Type, Padj = 0.05, lFC = 1)
 \item{Padj}{P adjusted cut off value.}
 
 \item{lFC}{logFoldChange cut off value.}
+
+\item{limma}{DEseq2 result is False, but limma result please enter T.}
 }
 \value{
 A filtered DEG data frame.
 }
 \description{
 Get DEG from DEseq2 result
+}
+\author{
+Zhiming Ye
 }

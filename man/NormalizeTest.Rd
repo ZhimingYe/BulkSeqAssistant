@@ -15,3 +15,6 @@ P Val
 \description{
 Perform a normality test by batch
 }
+\author{
+Zhiming Ye
+}

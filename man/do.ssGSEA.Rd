@@ -19,3 +19,6 @@ A enrichment score matrix
 \description{
 Do ssGSEA analysis
 }
+\author{
+Zhiming Ye
+}

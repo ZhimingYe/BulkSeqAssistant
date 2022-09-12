@@ -17,3 +17,6 @@ a matrix
 \description{
 Convert Ensembl ID to Symbol
 }
+\author{
+Zhiming Ye
+}

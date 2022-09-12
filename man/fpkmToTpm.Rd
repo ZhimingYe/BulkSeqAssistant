@@ -15,3 +15,6 @@ TPM matrix
 \description{
 Convert FPKM to TPM
 }
+\author{
+Zhiming Ye
+}

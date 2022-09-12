@@ -25,3 +25,6 @@ A ggplot2 object
 \description{
 A simple UMAP plot generator.
 }
+\author{
+Zhiming Ye
+}

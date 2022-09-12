@@ -17,3 +17,6 @@ A Cox-regression result
 \description{
 Batch uni-Cox regression to find survival-related genes
 }
+\author{
+Zhiming Ye
+}

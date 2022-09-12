@@ -17,3 +17,6 @@ A GSVA score matrix
 \description{
 Do GSVA analysis
 }
+\author{
+Zhiming Ye
+}

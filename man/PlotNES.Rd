@@ -41,3 +41,6 @@ a ggplot2 object.
 \description{
 A useful plot with NES and pvalue to display the result of GSEA analysis
 }
+\author{
+Zhiming Ye
+}

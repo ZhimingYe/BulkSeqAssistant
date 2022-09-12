@@ -17,3 +17,6 @@ A matrix
 \description{
 Output expression matrix based on top MAD value
 }
+\author{
+Zhiming Ye
+}

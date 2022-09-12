@@ -23,3 +23,6 @@ A ggplot2 object
 \description{
 A simple PCA plot generator.
 }
+\author{
+Zhiming Ye
+}

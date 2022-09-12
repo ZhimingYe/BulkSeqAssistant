@@ -32,3 +32,6 @@ A ggplot2 object
 \description{
 Two-group Box plot with stastical test
 }
+\author{
+Zhiming Ye
+}

@@ -23,3 +23,6 @@ A ggplot2 object
 \description{
 Generate Sankey Diagram.
 }
+\author{
+Zhiming Ye
+}

@@ -17,3 +17,6 @@ a Matrix
 \description{
 Arrange Table Function - Sort and filter columns of a data frame or matrix by a specified vector
 }
+\author{
+Zhiming Ye
+}

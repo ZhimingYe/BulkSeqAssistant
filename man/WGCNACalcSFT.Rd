@@ -14,3 +14,6 @@ WGCNACalcSFT(Mat, OutPutFile)
 \description{
 Calculate the SFT value for WGCNA analysis
 }
+\author{
+Zhiming Ye
+}

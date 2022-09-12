@@ -23,3 +23,6 @@ MultiDunn(Mat, FactorCol, Method = "bonferroni", OnlySig = F, pcutoff = 0.01)
 \description{
 Multi group nonparametric test
 }
+\author{
+Zhiming Ye
+}

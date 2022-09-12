@@ -17,3 +17,6 @@ PrettyMsigdbName(CHAR, start)
 \description{
 Remove "_" in MsigDB items
 }
+\author{
+Zhiming Ye
+}
