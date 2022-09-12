@@ -19,3 +19,6 @@ a character vector
 \description{
 remove separate from character
 }
+\author{
+Zhiming Ye
+}
