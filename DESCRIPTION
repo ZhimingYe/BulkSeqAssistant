@@ -1,7 +1,7 @@
 Package: BulkSeqAssistant
 Type: Package
 Title: A simple helper for bioinformics analysis
-Version: 5.2.2
+Version: 5.3
 Author: Zhiming Ye
 Maintainer: Zhiming Ye <zhiming.ye@qq.com>
 Description: A function collection developed to simplify the omics analysis process.
@@ -38,7 +38,8 @@ Imports:
     magrittr,
     readr,
     stringr,
-    tibble
+    tibble,
+    PMCMRplus
 License: MPL-2.0
 Encoding: UTF-8
 LazyData: true

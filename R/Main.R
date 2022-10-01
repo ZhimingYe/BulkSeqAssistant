@@ -1,4 +1,4 @@
-#Last changed : 2022-9-13 0:13
+#Last changed : 2022-10-02 0:14
 
 #library(tidyverse)
 #library(magrittr)
@@ -1021,5 +1021,102 @@ BuildMultigroupDEGlist<-function(Gene,Group,logFC,OrgDB=org.Hs.eg.db){
 }
 
 .onAttach<-function(libname,pkgname){
-  packageStartupMessage("\n***BulkSeqAssistant*** V5.2.2\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials. For learning and communication purposes only.\nBug feedback Email: zhiming.ye@qq.com\n")
+  packageStartupMessage("\n***BulkSeqAssistant*** V5.3\nAuthor:Zhiming Ye, Guangzhou Medical University\nPart of the code comes from online materials. For learning and communication purposes only.\nBug feedback Email: zhiming.ye@qq.com\n")
+}
+
+
+summary.PMCMR <- function(object, ...)
+{
+  OK <- inherits(object, c("PMCMR"))
+  if (!OK)
+    stop ("Not an object of class PMCMR")
+  if (!is.matrix(object$statistic))
+    stop ("Matrix object$statistic not found.")
+  pval <- as.numeric(object$p.value)
+  stat <- as.numeric(object$statistic)
+  grp1 <- as.numeric(c(col(object$p.value)))
+  cnam <- colnames(object$p.value)
+  grp2 <- as.numeric(c(row(object$p.value)))
+  rnam <- rownames(object$p.value)
+  STAT <- object$dist
+
+  if (!is.null(object$alternative)) {
+    if (object$alternative == "less"){
+      H0 <- paste(rnam[grp2], "-", cnam[grp1], ">=", "0")
+      PVAL <- paste("Pr(<", STAT, ")", sep="")
+    } else if (object$alternative == "greater"){
+      H0 <- paste(rnam[grp2], "-", cnam[grp1], "<=", "0")
+      PVAL <- paste("Pr(>", STAT, ")", sep="")
+    } else {
+      H0 <- paste(rnam[grp2], "-", cnam[grp1], "==", "0")
+      PVAL <- paste("Pr(>|", STAT, "|)", sep="")
+    }
+  } else {
+    H0 <- paste(rnam[grp2], "-", cnam[grp1], "==", "0")
+    PVAL <- paste("Pr(>|", STAT, "|)", sep="")
+  }
+
+  STAT2 <- paste0(STAT, " value")
+  OK <- !is.na(pval)
+  ## Symbols
+  symp <- symnum(pval[OK], corr=FALSE,
+                 cutpoints = c(0,  .001,.01,.05, .1, 1),
+                 symbols = c("***","**","*","."," "))
+
+  xdf <- data.frame(statistic = round(stat[OK], 3),
+                    p.value = format.pval(pval[OK]),
+                    symp)
+  rownames(xdf) <- H0[OK]
+  names(xdf) <- c(STAT2, PVAL, "")
+  ##
+  return(xdf)
+}
+
+
+#' @title Multi group Parametric test
+#'
+#' @param Mat Columns should be every variable to be tested, and another one column contains information about grouping, which is refer to the FactorCol
+#' @param FactorCol Which column contains the grouping information. The number of it.
+#' @param Method One of "LSD" or "SNK"
+#' @param OnlySig Whether show only significant result.
+#' @param pcutoff P value cut off.
+#'
+#' @return
+#' @export
+#' @author Zhiming Ye
+#'
+#' @examples
+MultiAOV<-function(Mat,FactorCol,Method="LSD",OnlySig=F,pcutoff=0.01){
+  # library(PMCMRplus)
+  WillTest<-Mat
+  ResultRes<-data.frame()
+  colnames(WillTest)[FactorCol]<-"Cluster"
+  CellTypeList<-colnames(WillTest)[-FactorCol]
+  for(CellType in CellTypeList){
+    TestSet<-WillTest[,c("Cluster",CellType)]
+    colnames(TestSet)[2]<-"Cell"
+    # KwRes<-kruskal.test(Cell~Cluster,TestSet)
+    TestSet$Cluster<-as.factor(TestSet$Cluster)
+    QA<-aov(Cell~Cluster,TestSet)
+    summary(QA)[[1]][["F value"]][1]->Fvalue
+    if(Fvalue<pcutoff){
+      if(Method!="LSD"){
+        cat(paste0("ANOVA PASS : ",CellType," , Processing SNK Test...\n"))
+        WRes<-snkTest(QA)
+      }else{
+        cat(paste0("ANOVA PASS : ",CellType," , Processing LSD Test...\n"))
+        WRes<-lsdTest(QA)
+      }
+      Result0<-summary.PMCMR(WRes)[,-3]%>%as.data.frame()%>%rownames_to_column(var="Comparasion")%>%dplyr::mutate(GroupName=CellType)
+      ResultRes<-rbind(ResultRes,Result0)
+    }
+  }
+  if(OnlySig){
+    ResultRes2<-ResultRes%>%dplyr::filter(P.adj<pcutoff)
+    ResultRes3<-ResultRes%>%dplyr::filter(GroupName%in%names(table(ResultRes2$GroupName)))
+    return(ResultRes3)
+  }
+  else{
+    return(ResultRes)
+  }
 }
