@@ -11,9 +11,6 @@ Print.Char(CharacterCollection, Type = "c")
 
 \item{Type}{A character. Can be "c", "tab" or "plus". c means comma, tab means print in multi-lines, and plus means to separate with "+"}
 }
-\value{
-
-}
 \description{
 An enhanced method to print character vector to the console
 }

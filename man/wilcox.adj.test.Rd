@@ -13,9 +13,6 @@ wilcox.adj.test(Mat, FactorCol, Method = "BH")
 
 \item{Method}{Default is "BH".}
 }
-\value{
-
-}
 \description{
 Batch wilCox test, with P value Corrected.
 }

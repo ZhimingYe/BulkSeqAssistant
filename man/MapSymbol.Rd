@@ -4,12 +4,16 @@
 \alias{MapSymbol}
 \title{Convert Ensembl ID to Symbol}
 \usage{
-MapSymbol(Mat, ColNum)
+MapSymbol(TargetGene, ColNum = 1, OrgDB, Type = "to")
 }
 \arguments{
-\item{Mat}{Target expression matrix}
+\item{TargetGene}{Target gene ID}
 
-\item{ColNum}{Number of column contains ensembl ID}
+\item{ColNum}{Number of column contains ensembl ID, only nesessary when input a matrix}
+
+\item{OrgDB}{The annotation DB}
+
+\item{Type}{to:ensembl ID->symbol, from:symbol->ID}
 }
 \value{
 a matrix

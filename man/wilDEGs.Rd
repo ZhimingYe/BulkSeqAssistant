@@ -9,9 +9,6 @@ wilDEGs(expr_matrix, sample_df, pval, fdr, FC, adj.method = "BH")
 \arguments{
 \item{adj.method}{}
 }
-\value{
-
-}
 \description{
 input1:data_matrix，rowname is gene，colname is sample; input2:sample_group(df),column must contains Sample_ID and Type
 }

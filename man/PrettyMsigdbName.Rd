@@ -11,9 +11,6 @@ PrettyMsigdbName(CHAR, start)
 
 \item{start}{number of character which is used to start to separate.}
 }
-\value{
-
-}
 \description{
 Remove "_" in MsigDB items
 }

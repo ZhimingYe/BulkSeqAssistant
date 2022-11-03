@@ -17,9 +17,6 @@ MultiAOV(Mat, FactorCol, Method = "LSD", OnlySig = F, pcutoff = 0.01)
 
 \item{pcutoff}{P value cut off.}
 }
-\value{
-
-}
 \description{
 Multi group Parametric test
 }
