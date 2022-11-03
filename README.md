@@ -7,6 +7,8 @@ by Zhiming Ye @ Yao Lab, SKLRD
 ### A function collection developed to simplify the omics analysis process.
 This package is designed for bulk RNA-seq analysis and organizing data.  
 Part of the function can be adopt in organizing data, WES analysis and scRNA-seq analysis as well.  
+### NEWs in V5.5 (2022-11-04):  
+- New MapSymbol function, supports mouse annotation.  
 ### NEWs in V5.3 (2022-10-02):  
 - Add a function : MultiAOV, for Multi-group parametric test.  
 ### Installation
