@@ -4,14 +4,14 @@
 \alias{MapSymbol}
 \title{Convert Ensembl ID to Symbol}
 \usage{
-MapSymbol(TargetGene, ColNum = 1, OrgDB, Type = "to")
+MapSymbol(TargetGene, ColNum = 1, OrgDB = org.Hs.eg.db, Type = "to")
 }
 \arguments{
 \item{TargetGene}{Target gene ID}
 
 \item{ColNum}{Number of column contains ensembl ID, only nesessary when input a matrix}
 
-\item{OrgDB}{The annotation DB}
+\item{OrgDB}{The annotation DB, default as org.Hs.eg.db}
 
 \item{Type}{to:ensembl ID->symbol, from:symbol->ID}
 }

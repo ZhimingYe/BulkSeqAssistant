@@ -24,5 +24,5 @@ A ggplot2 object
 A simple PCA plot generator.
 }
 \author{
-Zhiming Ye
+Zhiming Ye, Drawing codes cited from ggbiplot.R <- Copyright 2011 Vincent Q. Vu.
 }

@@ -4,7 +4,7 @@
 \alias{doKEGG}
 \title{ORA KEGG analysis by clusterProfiler by symbol identifiers.}
 \usage{
-doKEGG(GS, PVal = 0.01, QVal = 0.05, OrgDB = org.Hs.eg.db)
+doKEGG(GS, PVal = 0.01, QVal = 0.05, Organism = "hsa", OrgDB = org.Hs.eg.db)
 }
 \arguments{
 \item{GS}{Gene Symbols for enrichment analysis. NOT ENSEMBL ID.}
@@ -12,6 +12,8 @@ doKEGG(GS, PVal = 0.01, QVal = 0.05, OrgDB = org.Hs.eg.db)
 \item{PVal}{P adjusted value cut off, default 0.01}
 
 \item{QVal}{qvalue cut off, default 0.05}
+
+\item{Organism}{supported organism listed in 'https://www.genome.jp/kegg/catalog/org_list.html'}
 
 \item{OrgDB}{default as org.Hs.eg.db}
 }

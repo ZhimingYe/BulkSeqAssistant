@@ -4,7 +4,7 @@
 \alias{doRA}
 \title{ORA Reactome analysis by clusterProfiler by symbol identifiers.}
 \usage{
-doRA(GS, PVal = 0.01, QVal = 0.05, OrgDB = org.Hs.eg.db)
+doRA(GS, PVal = 0.01, QVal = 0.05, Organism = "human", OrgDB = org.Hs.eg.db)
 }
 \arguments{
 \item{GS}{Gene Symbols for enrichment analysis. NOT ENSEMBL ID.}
@@ -12,6 +12,8 @@ doRA(GS, PVal = 0.01, QVal = 0.05, OrgDB = org.Hs.eg.db)
 \item{PVal}{P adjusted value cut off, default 0.01}
 
 \item{QVal}{qvalue cut off, default 0.05}
+
+\item{Organism}{one of "human", "rat", "mouse", "celegans", "yeast", "zebrafish", "fly".}
 
 \item{OrgDB}{default as org.Hs.eg.db}
 }

@@ -4,12 +4,14 @@
 \alias{Arrange_Table}
 \title{Arrange Table Function - Sort and filter columns of a data frame or matrix by a specified vector}
 \usage{
-Arrange_Table(Mat, FilterList)
+Arrange_Table(Mat, FilterList, mode = "V2")
 }
 \arguments{
 \item{Mat}{Target matrix or df.}
 
 \item{FilterList}{Accord which to sort and filter columns}
+
+\item{mode}{in Version 5.6 update, new "V2" mode is enabled. you can choose the V1 mode to change to the origin mode.}
 }
 \value{
 a Matrix
