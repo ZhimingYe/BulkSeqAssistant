@@ -1015,7 +1015,7 @@ countToFPKM <- function(Counts,Length,gene)
     exp( log(counts) + log(1e9) - log(effLen) - log(N) )
   }
   Exprset<-Exprset%>%dplyr::filter(rownames(Exprset)%in%gene)
-  fpkms <- apply(Exprset,2,countToFpkm2,effLen = Length)
+  fpkms <- apply(Exprset,2,function(x)countToFpkm2(x,Length))
   return(fpkms)
 }
 
