@@ -1,7 +1,7 @@
 Package: BulkSeqAssistant
 Type: Package
 Title: A simple helper for bioinformics analysis
-Version: 5.8
+Version: 5.9
 Author: Zhiming Ye
 Maintainer: Zhiming Ye <zhiming.ye@qq.com>
 Description: A function collection developed to simplify the omics analysis process.
@@ -27,11 +27,9 @@ Imports:
     DOSE,
     cowplot,
     ggalluvial,
-    ggbiplot,
     ggplot2,
     ggpubr,
     ggsci,
-    org.Hs.eg.db,
     survival,
     survminer,
     tidyverse,

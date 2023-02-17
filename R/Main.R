@@ -407,7 +407,8 @@ MultiDunn<-function(Mat,FactorCol,Method="bonferroni",OnlySig=F,pcutoff=0.01){
     TestSet<-WillTest[,c("Cluster",CellType)]
     colnames(TestSet)[2]<-"Cell"
     KwRes<-kruskal.test(Cell~Cluster,TestSet)
-
+    cat("Overall P-Value: \n")
+    print(KwRes[["p.value"]])
     if(KwRes[["p.value"]]<pcutoff){
       cat(paste0("kruskal test PASS : ",CellType," , Processing Dunn Test...\n"))
       WRes<-dunnTest(Cell~Cluster,TestSet,method=Method)
@@ -1157,6 +1158,7 @@ MultiAOV<-function(Mat,FactorCol,Method="LSD",OnlySig=F,pcutoff=0.01){
     TestSet$Cluster<-as.factor(TestSet$Cluster)
     QA<-aov(Cell~Cluster,TestSet)
     summary(QA)[[1]][["F value"]][1]->Fvalue
+    cat("Overall P-Value:",Fvalue,"\n")
     if(Fvalue<pcutoff){
       if(Method!="LSD"){
         cat(paste0("ANOVA PASS : ",CellType," , Processing SNK Test...\n"))
